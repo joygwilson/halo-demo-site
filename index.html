@@ -1,1 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wireless GPS Dog Fence Demo</title>
+    <link rel="stylesheet" href="styles.css" />
 
+    <!-- OneSignal SDK -->
+    <script>
+      window.OneSignalDeferred = window.OneSignalDeferred || [];
+    </script>
+    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+    <script src="onesignal-init.js" defer></script>
+  </head>
+  <body>
+    <div class="promo-bar">Demo offer: Save $75 today</div>
+
+    <header class="site-header">
+      <div class="logo">Demo Collar</div>
+      <nav>
+        <a href="#features">Features</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#compare">Compare</a>
+      </nav>
+      <button class="btn btn-outline">Shop Now</button>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">New GPS Collar Demo</p>
+        <h1>Keep your dog safe with a wireless GPS fence</h1>
+        <p>
+          A simple demo site inspired by a modern pet safety brand experience.
+        </p>
+        <div class="hero-actions">
+          <button class="btn" id="push-btn">Enable Notifications</button>
+          <a class="btn btn-outline" href="#features">Learn More</a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img
+          src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1200&q=80"
+          alt="Dog running outside"
+        />
+      </div>
+    </section>
+
+    <section class="feature-grid" id="features">
+      <div class="card">
+        <h3>Create fences anywhere</h3>
+        <p>Set up safe boundaries at home, while traveling, or outdoors.</p>
+      </div>
+      <div class="card">
+        <h3>Live GPS tracking</h3>
+        <p>Track your dog’s location in real time with reliable updates.</p>
+      </div>
+      <div class="card">
+        <h3>Long battery life</h3>
+        <p>Designed for all-day peace of mind and fast charging.</p>
+      </div>
+    </section>
+
+    <section class="testimonials" id="testimonials">
+      <h2>Happy dogs, happy owners</h2>
+      <div class="testimonial-list">
+        <blockquote>
+          “It’s been amazing for keeping our dog safely in the yard.”
+        </blockquote>
+        <blockquote>
+          “The setup was simple, and I finally have peace of mind.”
+        </blockquote>
+        <blockquote>
+          “We use it at home and while traveling.”
+        </blockquote>
+      </div>
+    </section>
+
+    <section class="compare" id="compare">
+      <h2>Why pet owners choose this collar</h2>
+      <ul>
+        <li>Fast setup</li>
+        <li>Real-time tracking</li>
+        <li>Works without a physical fence</li>
+      </ul>
+    </section>
+
+    <footer class="site-footer">
+      <p>Demo site for web push testing.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
