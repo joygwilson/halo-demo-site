@@ -1,94 +1,272 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wireless GPS Dog Fence Demo</title>
-    <link rel="stylesheet" href="styles.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wireless GPS Dog Fence | Halo Collar</title>
+  <meta name="description" content="The go-anywhere, do-everything GPS dog fence & tracker. Create escape-proof wireless fences anywhere." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 
-    <!-- OneSignal SDK -->
-    <script>
-      window.OneSignalDeferred = window.OneSignalDeferred || [];
-    </script>
-    <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
-    <script src="onesignal-init.js" defer></script>
-  </head>
-  <body>
-    <div class="promo-bar">Demo offer: Save $75 today</div>
+  <!-- OneSignal SDK -->
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+  <script src="onesignal-init.js" defer></script>
 
-    <header class="site-header">
-      <div class="logo">Demo Collar</div>
-      <nav>
-        <a href="#features">Features</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#compare">Compare</a>
-      </nav>
-      <button class="btn btn-outline">Shop Now</button>
-    </header>
+  <style>
+    /* Fade-in animation for scroll elements */
+    .animate-on-scroll {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .animate-on-scroll.visible {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
+</head>
+<body>
 
-    <section class="hero">
-      <div class="hero-copy">
-        <p class="eyebrow">New GPS Collar Demo</p>
-        <h1>Keep your dog safe with a wireless GPS fence</h1>
-        <p>
-          A simple demo site inspired by a modern pet safety brand experience.
-        </p>
-        <div class="hero-actions">
-          <button class="btn" id="push-btn">Enable Notifications</button>
-          <a class="btn btn-outline" href="#features">Learn More</a>
+  <!-- ANNOUNCEMENT BAR -->
+  <div class="announcement-bar">
+    <span>🎉 Price drop: $75 off</span> &nbsp;·&nbsp; Now available: Realtree EDGE® &nbsp;·&nbsp; 90-day satisfaction guarantee
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <a href="#" class="nav-logo">HALO<span>.</span></a>
+    <ul class="nav-links">
+      <li><a href="#shop">Shop Halo</a></li>
+      <li><a href="#features">How It Works</a></li>
+      <li><a href="#reviews">Testimonials</a></li>
+      <li><a href="#deals">Deals</a></li>
+    </ul>
+    <div class="nav-actions">
+      <a href="#" class="btn-outline">Login</a>
+      <a href="#shop" class="btn-primary">Shop Now</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <div class="hero-badge">✦ Now: Halo Collar 5</div>
+      <h1>Your backyard,<br>now everywhere</h1>
+      <p>The go-anywhere, do-everything GPS dog fence &amp; tracker. 20 location updates per second. Up to 48-hour battery life.</p>
+      <div class="hero-cta">
+        <a href="#shop" class="btn-gold">Explore Halo →</a>
+        <a href="#features" class="btn-ghost">See How It Works</a>
+      </div>
+      <!-- Collar illustration via emoji/CSS since no real assets -->
+      <div class="hero-collar-img" aria-hidden="true">
+        <svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:560px;margin:0 auto;">
+          <rect x="40" y="70" width="520" height="60" rx="30" fill="#1a1a1a" stroke="#f5c842" stroke-width="3"/>
+          <rect x="260" y="55" width="80" height="90" rx="12" fill="#222" stroke="#f5c842" stroke-width="2"/>
+          <circle cx="300" cy="100" r="18" fill="#f5c842"/>
+          <text x="300" y="106" text-anchor="middle" font-size="16" fill="#000" font-weight="bold">H</text>
+          <circle cx="100" cy="100" r="8" fill="#f5c842" opacity="0.5"/>
+          <circle cx="500" cy="100" r="8" fill="#f5c842" opacity="0.5"/>
+          <text x="300" y="175" text-anchor="middle" font-size="13" fill="rgba(255,255,255,0.4)" font-family="Inter,sans-serif">IP67 Waterproof · Dual-Frequency GPS · 48hr Battery</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES STRIP -->
+  <div class="features-strip">
+    <div class="feature-item">
+      <div class="feature-icon">📡</div>
+      <h4>AlwaysOn™ GPS</h4>
+      <p>20 updates per second</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">🔋</div>
+      <h4>48-Hour Battery</h4>
+      <p>Safety that never sleeps</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">🌊</div>
+      <h4>IP67 Waterproof</h4>
+      <p>Built for any adventure</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">📱</div>
+      <h4>Halo App</h4>
+      <p>Instant alerts &amp; tracking</p>
+    </div>
+    <div class="feature-item">
+      <div class="feature-icon">🐾</div>
+      <h4>All Breeds</h4>
+      <p>One size fits all</p>
+    </div>
+  </div>
+
+  <!-- SHOP SECTION -->
+  <section class="section" id="shop">
+    <div class="section-center animate-on-scroll">
+      <h2>The ultimate smart collar</h2>
+      <p>GPS fences keep your dog safe plus location tracking for peace of mind — at home, traveling, or completely off-grid.</p>
+    </div>
+    <div class="products-grid">
+      <div class="product-card animate-on-scroll">
+        <div class="product-card-img">🐾</div>
+        <div class="product-card-body">
+          <div class="product-badge">✦ NEW</div>
+          <h3>Halo Collar 5</h3>
+          <p class="product-price">
+            <strong>$524</strong>
+            <s>$599</s>
+            &nbsp;<span style="color:#2ecc71;font-weight:600;font-size:13px;">Save $75</span>
+          </p>
+          <a href="#" class="btn-primary">Shop Now</a>
         </div>
       </div>
-      <div class="hero-image">
-        <img
-          src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=1200&q=80"
-          alt="Dog running outside"
-        />
+      <div class="product-card animate-on-scroll">
+        <div class="product-card-img" style="background:linear-gradient(135deg,#1a1a2e,#2e2e3e);">🏕️</div>
+        <div class="product-card-body">
+          <div class="product-badge">WHILE SUPPLIES LAST</div>
+          <h3>Halo Collar 4</h3>
+          <p class="product-price">
+            <strong>$424</strong>
+            <s>$549</s>
+            &nbsp;<span style="color:#2ecc71;font-weight:600;font-size:13px;">Save $125</span>
+          </p>
+          <a href="#" class="btn-outline">Shop Now</a>
+        </div>
       </div>
-    </section>
+      <div class="product-card animate-on-scroll">
+        <div class="product-card-img" style="background:linear-gradient(135deg,#0a0a0a,#1a1200);">📡</div>
+        <div class="product-card-body">
+          <div class="product-badge">ACCESSORIES</div>
+          <h3>Halo Beacons</h3>
+          <p class="product-price">Extend your safe zones</p>
+          <a href="#" class="btn-outline">Shop Beacons</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <section class="feature-grid" id="features">
-      <div class="card">
-        <h3>Create fences anywhere</h3>
-        <p>Set up safe boundaries at home, while traveling, or outdoors.</p>
+  <!-- FEATURES DEEP DIVE -->
+  <section class="section" id="features" style="background:#f9f9f9;">
+    <div class="section-center animate-on-scroll">
+      <h2>Smart safety in the Halo app</h2>
+      <p>Customizable boundaries, AlwaysOn™ location tracking, instant alerts, and more at your fingertips.</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;max-width:1100px;margin:0 auto;">
+      <div class="animate-on-scroll" style="background:#fff;border-radius:16px;padding:32px;box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+        <div style="font-size:36px;margin-bottom:16px;">🗺️</div>
+        <h4 style="font-weight:700;margin-bottom:8px;">Escape-proof fences anywhere</h4>
+        <p style="font-size:14px;color:#666;">Safe, wireless fences at home, traveling, or completely off-grid — just a tap away.</p>
       </div>
-      <div class="card">
-        <h3>Live GPS tracking</h3>
-        <p>Track your dog’s location in real time with reliable updates.</p>
+      <div class="animate-on-scroll" style="background:#fff;border-radius:16px;padding:32px;box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+        <div style="font-size:36px;margin-bottom:16px;">⚡</div>
+        <h4 style="font-weight:700;margin-bottom:8px;">AlwaysOn™ GPS</h4>
+        <p style="font-size:14px;color:#666;">Nonstop, real-time GPS containment and location tracking that never sleeps.</p>
       </div>
-      <div class="card">
-        <h3>Long battery life</h3>
-        <p>Designed for all-day peace of mind and fast charging.</p>
+      <div class="animate-on-scroll" style="background:#fff;border-radius:16px;padding:32px;box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+        <div style="font-size:36px;margin-bottom:16px;">🎓</div>
+        <h4 style="font-weight:700;margin-bottom:8px;">Training &amp; Expert Support</h4>
+        <p style="font-size:14px;color:#666;">Step-by-step dog training and friendly face-to-face support from in-house experts.</p>
       </div>
-    </section>
+      <div class="animate-on-scroll" style="background:#fff;border-radius:16px;padding:32px;box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+        <div style="font-size:36px;margin-bottom:16px;">❤️</div>
+        <h4 style="font-weight:700;margin-bottom:8px;">Halo Health</h4>
+        <p style="font-size:14px;color:#666;">Logs walks and tracks daily activity so you stay connected to your dog's health.</p>
+      </div>
+      <div class="animate-on-scroll" style="background:#fff;border-radius:16px;padding:32px;box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+        <div style="font-size:36px;margin-bottom:16px;">🔔</div>
+        <h4 style="font-weight:700;margin-bottom:8px;">Instant Alerts</h4>
+        <p style="font-size:14px;color:#666;">Get notified the moment your dog approaches a boundary — even without your phone nearby.</p>
+      </div>
+      <div class="animate-on-scroll" style="background:#fff;border-radius:16px;padding:32px;box-shadow:0 2px 16px rgba(0,0,0,0.05);">
+        <div style="font-size:36px;margin-bottom:16px;">📶</div>
+        <h4 style="font-weight:700;margin-bottom:8px;">LTE, Wi-Fi &amp; Bluetooth</h4>
+        <p style="font-size:14px;color:#666;">Triple connectivity for seamless coverage wherever your adventures take you.</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="testimonials" id="testimonials">
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials" id="reviews">
+    <div class="section-center animate-on-scroll">
       <h2>Happy dogs, happy owners</h2>
-      <div class="testimonial-list">
-        <blockquote>
-          “It’s been amazing for keeping our dog safely in the yard.”
-        </blockquote>
-        <blockquote>
-          “The setup was simple, and I finally have peace of mind.”
-        </blockquote>
-        <blockquote>
-          “We use it at home and while traveling.”
-        </blockquote>
+      <p>Trusted by over 500,000 dog parents — the most widely used GPS dog fence in the world.</p>
+    </div>
+    <div class="testimonials-grid">
+      <div class="testimonial-card animate-on-scroll">
+        <div class="testimonial-stars">★★★★★</div>
+        <blockquote>"It's completely blown us away with how well it works keeping our dogs in our yard."</blockquote>
+        <div class="testimonial-author">Scott</div>
+        <div class="testimonial-detail">.75 Acre Lot</div>
       </div>
-    </section>
+      <div class="testimonial-card animate-on-scroll">
+        <div class="testimonial-stars">★★★★★</div>
+        <blockquote>"It makes me so happy that they can go run, and be free, and just live their best life."</blockquote>
+        <div class="testimonial-author">Andrea</div>
+        <div class="testimonial-detail">.4 Acre property</div>
+      </div>
+      <div class="testimonial-card animate-on-scroll">
+        <div class="testimonial-stars">★★★★★</div>
+        <blockquote>"The Halo has been my life saving device. My biggest regret is not getting it sooner."</blockquote>
+        <div class="testimonial-author">Deana</div>
+        <div class="testimonial-detail">47 Acres</div>
+      </div>
+    </div>
+  </section>
 
-    <section class="compare" id="compare">
-      <h2>Why pet owners choose this collar</h2>
-      <ul>
-        <li>Fast setup</li>
-        <li>Real-time tracking</li>
-        <li>Works without a physical fence</li>
-      </ul>
-    </section>
+  <!-- TRUST STRIP -->
+  <div class="trust-strip animate-on-scroll">
+    <p>Why 500,000+ dog parents choose Halo</p>
+    <div class="trust-badges">
+      <div class="trust-badge"><span class="trust-badge-icon">🛡️</span> 90-Day Guarantee</div>
+      <div class="trust-badge"><span class="trust-badge-icon">🚚</span> Free Shipping</div>
+      <div class="trust-badge"><span class="trust-badge-icon">🏆</span> #1 GPS Dog Fence</div>
+      <div class="trust-badge"><span class="trust-badge-icon">💬</span> Expert Support</div>
+    </div>
+  </div>
 
-    <footer class="site-footer">
-      <p>Demo site for web push testing.</p>
-    </footer>
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">HALO<span>.</span></div>
+        <p class="footer-tagline">The go-anywhere, do-everything GPS dog fence &amp; tracker. Trusted by 500,000+ dog parents worldwide.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Shop</h5>
+        <ul>
+          <li><a href="#">Halo Collar 5</a></li>
+          <li><a href="#">Halo Collar 4</a></li>
+          <li><a href="#">Beacons</a></li>
+          <li><a href="#">Accessories</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Learn</h5>
+        <ul>
+          <li><a href="#">How It Works</a></li>
+          <li><a href="#">Reviews</a></li>
+          <li><a href="#">Deals</a></li>
+          <li><a href="#">FAQ</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Account</h5>
+        <ul>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#">My Orders</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 Halo Collar. All rights reserved. · Demo replica for internal purposes only.</p>
+    </div>
+  </footer>
 
-    <script src="script.js"></script>
-  </body>
+  <script src="script.js"></script>
+</body>
 </html>
