@@ -2,7 +2,7 @@ window.OneSignalDeferred = window.OneSignalDeferred || [];
 
 OneSignalDeferred.push(async function (OneSignal) {
   await OneSignal.init({
-    appId: "YOUR_ONESIGNAL_APP_ID", // 🔁 Replace with your actual App ID
+    appId: "47f7e16c-be75-4634-ae97-a726ad98630e", // 🔁 Replace with your actual App ID
     serviceWorkerPath: "/OneSignalSDKWorker.js",
     serviceWorkerParam: { scope: "/" },
 
